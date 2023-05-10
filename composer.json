@@ -1,0 +1,15 @@
+{
+  "name": "autoload/namespacer",
+  "autoload": {
+    "psr-4": {
+      "app\\": "./"
+    }
+  },
+  "authors": [
+    {
+      "name": "Gabu-Rayon",
+      "email": "gibsonmurimi4@gmail.com"
+    }
+  ],
+  "require": {}
+}
