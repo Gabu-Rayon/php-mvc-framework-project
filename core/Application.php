@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * Summary of namespace app\core
+ * 
+ */
 namespace app\core;
 
 class Application{
