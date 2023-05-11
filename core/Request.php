@@ -6,6 +6,7 @@ namespace app\core;
  {
      public function getPath()
      {
+    //server URI
          $path  = $_SERVER['REQUEST_URI'] ?? '/';
 
          $position = strpos($path, '?');
