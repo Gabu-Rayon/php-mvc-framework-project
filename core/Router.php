@@ -28,10 +28,16 @@ class Router
 
         
         if ($callback  === false) {
-            echo "Not Found";
-            exit;
+
+            return "Not Found";
+
+        }
+         if (is_string($callback)) {
+
+            return $this->renderView();
+            
         }
 
-         echo  call_user_func($callback);
+         return call_user_func($callback);
     }
 }
