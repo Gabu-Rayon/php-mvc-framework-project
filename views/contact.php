@@ -1,5 +1,5 @@
 <h1>Contact Us</h1>
-<form>
+<form action="" method="post">
     <div class="mb-3">
         <label>Subject</label>
         <input type="text" name="subject" class="form-control">
