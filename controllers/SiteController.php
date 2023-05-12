@@ -2,9 +2,11 @@
 
 namespace  app\controllers;
 
+use app\core\Controller;
 
 
-class SiteController{
+
+class SiteController extends Controller {
     
    public function home(){
 
@@ -12,11 +14,11 @@ class SiteController{
             'user' => "Rayon"
         ];
 
-       return Application::$app->router->renderView('home',$params);
+       return $this->render('home',$params);
     }
 
     public function handleContact(){
 
-       return Application::$app->router->renderView('contact');
+       return $this->render('contact');
     }
 }
