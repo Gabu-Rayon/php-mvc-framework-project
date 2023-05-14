@@ -10,6 +10,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
  
 $app->router->get('/', 'home');
 
+
 // $app->router->post('home',[SiteController::class,'home']);
 $app->router->get('/home',[new SiteController(),'home']);  //to this
 
