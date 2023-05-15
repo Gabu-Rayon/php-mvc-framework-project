@@ -1,6 +1,6 @@
 <?php
 /**
- * Summary of Applocation Class
+ * Summary of Application Class
  * 
  */
 namespace app\core;
