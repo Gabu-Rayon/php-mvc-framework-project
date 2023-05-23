@@ -52,12 +52,12 @@ abstract class Model{
 
                 if ($ruleName === self::RULE_MIN && strlen($value) < $rule['min']) {
                    
-                  $this->addError($attribute, self::RULE_MIN);;  
+                  $this->addError($attribute, self::RULE_MIN,$rule);;  
                 }
 
                 if ($ruleName === self::RULE_MAX && strlen($value) > $rule['max']) {
                    
-                  $this->addError($attribute, self::RULE_MAX);;  
+                  $this->addError($attribute, self::RULE_MAX,$rule);;  
                 }
            }
         }
@@ -65,7 +65,7 @@ abstract class Model{
         return empty($this->errors);
     }
 
-    public function addError(string $attribute,string $rule){
+    public function addError(string $attribute,string $rule,$params =[]){
 
         $message = $this->errorMessages()[$rule] ?? '';
 
