@@ -28,20 +28,36 @@ abstract class Model{
     public function validate(){
 
         foreach ($this->rules() as $attribute => $rules) {
+            
            $value = $this->{$attribute};
+
            foreach ($rules as $rule) {
+
                 $ruleName = $rule;
+
                 if (!is_string($ruleName)) {
                     $ruleName = $rule[0];
                 }
+
                 if ($ruleName === self::RULE_REQUIRED && !$value) {
                     
                 $this->addError($attribute, self::RULE_REQUIRED);;
                 }
-                if ($ruleName === self::RULE_EMAIL && !$filter_var($value,FILTER_VALIDATE_EMAIL)) {
+
+                if ($ruleName === self::RULE_EMAIL && !filter_var($value,FILTER_VALIDATE_EMAIL)) {
                  
                  
                   $this->addError($attribute, self::RULE_EMAIL);;  
+                }
+
+                if ($ruleName === self::RULE_MIN && strlen($value) < $rule['min']) {
+                   
+                  $this->addError($attribute, self::RULE_MIN);;  
+                }
+
+                if ($ruleName === self::RULE_MAX && strlen($value) > $rule['max']) {
+                   
+                  $this->addError($attribute, self::RULE_MAX);;  
                 }
            }
         }
