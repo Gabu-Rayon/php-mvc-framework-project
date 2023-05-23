@@ -28,11 +28,13 @@ class Application{
     }
 
 
-    public function getController(){
+    public function getController():\app\core\Controller{
+        
         return $this->controller;
     }
 
-     public function setController(){
+     public function setController(\app\core\Controller $controller):  void {
+        
         $this->controller = $controller;
     }
 

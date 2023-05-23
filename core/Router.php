@@ -54,7 +54,6 @@ class Router
             
             Application::$app->controller = new $callback[0]();
 
-
             $callback[0] = Application::$app->controller;
         }
 

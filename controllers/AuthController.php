@@ -6,12 +6,13 @@ use app\core\Request;
 use app\core\Controller;
 
 
-
 class AuthController extends Controller{
     
 
      public function login(){
-        
+
+      $this->setLayout('auth');
+      
         return $this->render('login');
      }
 
@@ -21,6 +22,7 @@ class AuthController extends Controller{
             
             return 'Handle  Submitted data ';
         }
+         $this->setLayout('auth');
         return $this->render('register');
      }
 }
