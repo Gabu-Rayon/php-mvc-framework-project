@@ -10,13 +10,18 @@ class SiteController extends Controller {
     
    public function home(){
 
+      
         $params = [
-            'user' => "Rayon"
+            'name' => "Rayon"
         ];
 
        return $this->render('home',$params);
     }
+public function contact(){
 
+       return $this->render('contact');
+    }
+    
     public function handleContact(){
 
        return $this->render('contact');

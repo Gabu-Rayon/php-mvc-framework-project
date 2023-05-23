@@ -8,7 +8,8 @@ require_once __DIR__ . '/../vendor/autoload.php';
 
  $app = new Application(dirname(__DIR__));
  
-$app->router->get('/', 'home');
+ 
+$app->router->get('/', [new SiteController(), 'home']);
 
 
 // $app->router->post('home',[SiteController::class,'home']);
@@ -16,7 +17,7 @@ $app->router->get('/home',[new SiteController(),'home']);  //to this
 
 
 
-$app->router->get('/contact','contact');
+$app->router->get('/contact',[new SiteController() ,'contact']);
 
 // $app->router->post('/contact',[SiteController::class,'contact']);
 $app->router->post('/contact',[new SiteController(),'handleContact']);  //to this
