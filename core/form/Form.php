@@ -3,6 +3,8 @@
 
 namespace app\core\form;
 
+use app\core\Model;
+
 
 
 class Form{
@@ -20,7 +22,8 @@ class Form{
         
     }
 
-    public function field(){
-    
+    public function field(Model $model,$attribute){
+        
+            return new Field($model, $attribute);
     }
 }
