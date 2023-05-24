@@ -4,18 +4,18 @@
         <div class="col">
             <div class="mb-3">
                 <label>Firstname</label>
-                <input type="text" name="firstname" vale="<?php //echo $model->firstname ?>"
-                    class="form-control  <?php //echo $model->hasError('firstname') ? 'is-invalid' : '' ?>">
+                <input type="text" name="firstname" value="<?php echo $model->firstname ?>"
+                    class="form-control<?php echo $model->hasError('firstname') ? 'is-invalid' : '' ?>">
             </div>
-            <div class="invalid-feedback">
-                <?php //echo $model->getFirstError($attribute)  ?>
+            <div class="invalid-feedback text-warning">
+                <?php echo $model->getFirstError('firstname')  ?>
             </div>
         </div>
 
         <div class="col">
             <div class="mb-3">
                 <label>Lastname</label>
-                <input type="text" name="lastname" class="form-control">
+                <input type="text" name="lastname" value="#" class="form-control">
             </div>
         </div>
     </div>
