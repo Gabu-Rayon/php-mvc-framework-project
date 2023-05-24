@@ -4,7 +4,11 @@
         <div class="col">
             <div class="mb-3">
                 <label>Firstname</label>
-                <input type="text" name="firstname" class="form-control">
+                <input type="text" name="firstname" vale="<?php //echo $model->firstname ?>"
+                    class="form-control  <?php //echo $model->hasError('firstname') ? 'is-invalid' : '' ?>">
+            </div>
+            <div class="invalid-feedback">
+                <?php //echo $model->getFirstError($attribute)  ?>
             </div>
         </div>
 
@@ -31,4 +35,4 @@
     <button type="submit" class="btn btn-primary">Register</button>
 </form>
 
-<p>Already Have an Account <a href="/register">Login Here</a></p>
+<p>Already Have an Account <a href="/login">Login Here</a></p>
