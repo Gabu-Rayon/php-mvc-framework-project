@@ -27,9 +27,6 @@ public function contact(){
        
        $body = $request->getBody();
 
-        echo '<pre>';
-            var_dump($body);
-            echo '</pre>';
        return $this->render('contact');
     }
 }
