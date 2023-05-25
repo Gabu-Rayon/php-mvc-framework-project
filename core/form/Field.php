@@ -21,13 +21,13 @@ class Field
     {
         return sprintf(
             '
-               <div class="mb-3">
+            <div class="mb-3">
                 <label>%s</label>
-                <input type="text" name="%s" value="%s"  class="form-control%s">
-                 <div class="invalid-feedback text-warning">
+                <input type="text" name="%s" value="%s"  class="form-control%s">                 
+            </div>                   
+            <div class="invalid-feedback text-warning">
                     %s
-                   </div>
-                  </div> ',
+            </div>',
             $this->attribute,
             $this->attribute,
             $this->model->{$this->attribute},
