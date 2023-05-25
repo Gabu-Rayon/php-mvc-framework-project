@@ -23,15 +23,16 @@ class Field
             '
             <div class="mb-3">
                 <label>%s</label>
-                <input type="text" name="%s" value="%s"  class="form-control%s">                 
-            </div>                   
-            <div class="invalid-feedback text-warning">
+                <input type="text" name="%s" value="%s"  class="form-control%s">  
+                  <div class="invalid-feedback">
                     %s
-            </div>',
+                   </div>             
+            </div>'                
+            ,
             $this->attribute,
             $this->attribute,
             $this->model->{$this->attribute},
-            $this->model->hasError($this->attribute) ? 'is-invalid' : '',
+            $this->model->hasError($this->attribute) ? '  is-invalid' : '',
             $this->model->getFirstError($this->attribute)    
         );
     }

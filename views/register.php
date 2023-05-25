@@ -1,41 +1,50 @@
+<?php 
+
+?>
 <h1>Create an Account</h1>
 
-<?php //$form = \app\core\form\Form::begin('',"post")  ?>
+<?php $form = \app\core\form\Form::begin('',"post")?>
 
-<?php  //echo $form->field($model,'firstname') ?>
+<?php  echo $form->field($model,'firstname')?>
 
-<?php  //echo $form->field($model,'lastname') ?>
+<?php  echo $form->field($model,'lastname')?>
 
-<?php  //echo $form->field($model,'email') ?>
+<?php  echo $form->field($model,'email')?>
 
-<?php  //echo $form->field($model,'password') ?>
+<?php  echo $form->field($model,'password')?>
 
-<?php  //echo $form->field($model,'confirmPassword') ?>
+<?php  echo $form->field($model,'confirmPassword')?>
 
-<!-- <button type="submit" class="btn btn-primary">Register</button> -->
+<button type="submit" class="btn btn-primary">Register</button>
 
-<!-- <?php //echo \app\core\form\Form::end()  ?> -->
+<?php echo \app\core\form\Form::end()?>
 
 
-<form action="" method="post">
+<!-- <form action="" method="post">
     <div class="row">
         <div class="col">
             <div class="mb-3">
                 <label>Firstname</label>
-                <input type="text" name="firstname" value="<?php echo $model->firstname ?>"
-                    class="form-control<?php echo $model->hasError('firstname') ? '  is-invalid' : '' ?>">
+                <input type="text" name="firstname" value="<?php //echo $model->firstname ?>"
+                    class="form-control<?php //echo $model->hasError('firstname') ? '  is-invalid' : '' ?>">
+                <div class="invalid-feedback">
+                    <?php //echo $model->getFirstError('firstname')  ?>
+                </div>
             </div>
-            <div class="invalid-feedback text-warning">
-                <?php echo $model->getFirstError($aa)  ?>
+        </div>
+    </div>
+
+    <div class="col">
+        <div class="mb-3">
+            <label>Lastname</label>
+            <input type="text" name="lastname" value="<?php //echo $model->lastname ?>"
+                class="form-control <?php //echo $model->hasError('lastname') ? '  is-invalid' : '' ?>">
+            <div class="invalid-feedback">
+                <?php //echo $model->getFirstError('lastname')  ?>
             </div>
         </div>
 
-        <div class="col">
-            <div class="mb-3">
-                <label>Lastname</label>
-                <input type="text" name="lastname" value="#" class="form-control">
-            </div>
-        </div>
+    </div>
     </div>
     <div class="mb-3">
         <label>Email</label>
@@ -53,4 +62,4 @@
     <button type="submit" class="btn btn-primary">Register</button>
 </form>
 
-<p>Already Have an Account <a href="/login">Login Here</a></p>
+<p>Already Have an Account <a href="/login">Login Here</a></p> -->
