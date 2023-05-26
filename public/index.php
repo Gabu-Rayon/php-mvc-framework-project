@@ -5,13 +5,11 @@ use app\controllers\SiteController;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv =  Dotenv\Dotenv::createImmutable(dirname(__DIR__));
+
+// $dotenv = new  \Dotenv\Dotenv::createImmutable(__DIR__);
 
 $dotenv->load();
-
-
-
-
 
 $config = [
 
