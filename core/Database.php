@@ -21,8 +21,28 @@ class Database{
      }
 
      public function applyMigrations(){
-        
+        $this->createMigrationsTable();
+        $this->getAppliedMigrations();
+
+        $files = scandir(Application::$ROOT_DIR . '/migrations');
      }
 
-    
+     public function createMigrationsTable(){
+        $this->pdo->exec("CREATE TABLE IF NOT EXISTS migrations(
+            id INT AUTO_INCREMENT PRIMARY KEY,
+            migration VARCHAR(255),
+            created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+        ) ENGINE=INNODB;
+        ");
+     }
+     public function getAppliedMigrations(){
+        //migration is column name while migrations is the table name
+
+        $statement = $this->pdo->prepare("SELECT migration FROM migrations");
+      
+        $statement->execute();
+
+        return $statement->fetchAll(\PDO::FETCH_COLUMN);
+    }
+         
 }
