@@ -19,8 +19,8 @@ class User extends DbModel{
 
      }
     public function register(){
-        
-        echo "Creating New User";
+
+       return $this->save();       
         
     }
 
@@ -38,5 +38,12 @@ class User extends DbModel{
             'confirmPassword' => [self::RULE_REQUIRED,[self::RULE_MATCH, 'match' => 'password']] 
                        
         ];
+    }
+
+
+    public function attributes() : array{
+
+
+        return ['firstname', 'lastname','email','password'];
     }
 }
