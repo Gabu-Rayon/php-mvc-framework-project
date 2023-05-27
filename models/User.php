@@ -2,11 +2,10 @@
 
 
 namespace app\models;
+use app\core\DbModel;
 
-use app\core\Model;
 
-
-class RegisterModel extends Model{
+class User extends DbModel{
 
     public string $firstname = '';
     public string $lastname = '';
@@ -14,7 +13,11 @@ class RegisterModel extends Model{
     public string $password  = '';
     public string $confirmPassword = ''  ;
 
+     public function tableName(): string {
 
+        return 'user';
+
+     }
     public function register(){
         
         echo "Creating New User";
