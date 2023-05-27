@@ -10,17 +10,19 @@ class User extends DbModel{
     public string $firstname = '';
     public string $lastname = '';
     public string  $email = '';
+    public string $status = false;
     public string $password  = '';
     public string $confirmPassword = ''  ;
 
      public function tableName(): string {
 
-        return 'user';
+        return 'users';
 
      }
-    public function register(){
+    public function save(){
 
-       return $this->save();       
+      $this->password = password_hash($this->password, PASSWORD_DEFAULT);
+      return parent::save();       
         
     }
 
