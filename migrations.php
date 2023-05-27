@@ -6,12 +6,14 @@ use app\controllers\SiteController;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
+//package required for migration configuration
 $dotenv =  Dotenv\Dotenv::createImmutable(__DIR__);
 
 // $dotenv = new  \Dotenv\Dotenv::createImmutable(__DIR__);
 
 $dotenv->load();
 
+//migration configuration
 $config = [
 
   'db' =>[
