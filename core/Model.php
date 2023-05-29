@@ -79,7 +79,8 @@ abstract class Model{
 
                   $this->addError($attribute, self::RULE_MATCH,$rule); 
                 }
-
+                
+                //rule for email to be unique
                 if ($ruleName === self::RULE_UNIQUE) {
                   
                  $className = $rule['class'];
