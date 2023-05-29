@@ -10,7 +10,7 @@
 
 <?php  echo $form->field($model,'password')->passwordField() ?>
 
-<button type="submit" class="btn btn-primary">Register</button>
+<button type="submit" class="btn btn-primary">Login</button>
 
 <?php echo \app\core\form\Form::end()?>
 
