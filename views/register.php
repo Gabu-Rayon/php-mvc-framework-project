@@ -1,5 +1,5 @@
 <?php 
-
+/** @var $model \app\models\User */
 
 ?>
 <h1>Create an Account</h1>
@@ -66,5 +66,5 @@
 
     <button type="submit" class="btn btn-primary">Register</button>
 </form>
-
-<p>Already Have an Account <a href="/login">Login Here</a></p> -->
+-->
+<p>Already Have an Account <a href="/login">Login Here</a></p>
