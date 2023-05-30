@@ -6,7 +6,7 @@ namespace app\models;
 use app\core\Model;
 use app\models\User;
 use app\core\Application;
-
+use app\core\DbModel;
 
  class LoginForm extends Model{
     
@@ -31,6 +31,13 @@ use app\core\Application;
     }
      public function login(){
 
+
+        // Create an instance of DbModel
+        // $dbModel = new DbModel();
+
+        // Call the findOne method on the $dbModel object
+        // $user = $dbModel->findOne(['email' => $this->email]);
+
         $user = User::findOne(['email' => $this->email]);
         
         if (!$user) {
@@ -45,9 +52,6 @@ use app\core\Application;
 
             return false;
         }
-         echo '<pre>';
-            var_dump($user);
-            echo '</pre>';
 
         return Application::$app->login($user);
     }
