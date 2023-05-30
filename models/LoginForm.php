@@ -31,13 +31,6 @@ use app\core\DbModel;
     }
      public function login(){
 
-
-        // Create an instance of DbModel
-        // $dbModel = new DbModel();
-
-        // Call the findOne method on the $dbModel object
-        // $user = $dbModel->findOne(['email' => $this->email]);
-
         $user = User::findOne(['email' => $this->email]);
         
         if (!$user) {
