@@ -47,6 +47,12 @@ class Session
         return $_SESSION[$key] ?? false;
 
     }
+   /***  //When User Log out*/
+    public function remove($key){
+
+        unset($_SESSION[$key]);
+    }
+
     public function __destruct()
     {
 
