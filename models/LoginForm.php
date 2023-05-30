@@ -5,6 +5,7 @@ namespace app\models;
 
 use app\core\Model;
 use app\core\Application;
+use app\core\DbModel;
 
  class LoginForm extends Model{
     
@@ -28,8 +29,10 @@ use app\core\Application;
         ];
     }
  public function login(){
+        
     
         $user = User::findOne(['email' => $this->email]);
+
         
         if (!$user) {
             $this->addError('email', 'User does not exist with this email address');
@@ -40,9 +43,7 @@ use app\core\Application;
             $this->addError('password', 'Password is incorrect');
             return false;
         }
-         echo '<pre>';
-            var_dump($user);
-            echo '</pre>';
+        
         return Application::$app->login($user);
     }    
  }

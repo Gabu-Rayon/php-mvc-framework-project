@@ -110,7 +110,7 @@ abstract class Model{
         return empty($this->errors);
     }
 
-    public function addErrorForRule(string $attribute,string $rule,$params =[]){
+    private function addErrorForRule(string $attribute,string $rule,$params =[]){
 
         $message = $this->errorMessages()[$rule] ?? '';
 

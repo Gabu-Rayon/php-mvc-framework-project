@@ -23,6 +23,7 @@ class AuthController extends Controller{
       if ($loginForm->validate() && $loginForm->login()) {
 
         $response->redirect('/');
+        
         return;
       }
 
