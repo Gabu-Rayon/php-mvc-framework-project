@@ -60,11 +60,18 @@ class Application{
         $this->user = $user;
         $primaryKey = $user->primaryKey();
         $primaryValue = $user->{$primaryKey};
-                $this->session->set('user', $primaryValue);;
+        $this->session->set('user', $primaryValue);
+        return true;
         
 
     }
-    
+    public function logout(){
+
+        $this->user = null;
+
+        $this->session->remove('user');
+
+    }
     public function run(){
            ///Code Here
       echo   $this->router->resolve();

@@ -42,19 +42,19 @@ use app\core\Application;
         </div>
     </nav>
     <div class="container">
-     <?php
+        <?php
 
      if (Application::$app->session->getFlash('success')):
      
      ?>
 
-    <div class="alert alert-success">
+        <div class="alert alert-success">
 
-        <?php echo Application::$app->session->getFlash('success') ?>
+            <?php echo Application::$app->session->getFlash('success') ?>
 
-    </div>
+        </div>
 
-    <?php endif; ?>
+        <?php endif; ?>
 
         {{content}}
 
