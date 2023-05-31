@@ -34,7 +34,7 @@ use app\core\Application;
                 <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
 
                     <li class="nav-item active">
-                        <a class="nav-link  active" href="/login">Login<span class="sr-only">(Current)</span></a>
+                        <a class="nav-link  active" href="/login">Login<span class="sr-only"> (Current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/register">Register</a>
