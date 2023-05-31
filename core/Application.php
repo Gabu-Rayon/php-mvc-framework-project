@@ -69,8 +69,7 @@ class Application{
         
 
     }
-    public static function isGuest()
-    {
+    public static function isGuest(){
         return !self::$app->user;
     }
     public function logout(){
