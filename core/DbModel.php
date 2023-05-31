@@ -31,7 +31,7 @@ abstract class DbModel extends Model{
         
     }
 
-    public static function findOne($where){
+    public  function findOne($where){
 
         //sql query example [email->zura@emple.com,firstname=>gibson]
         

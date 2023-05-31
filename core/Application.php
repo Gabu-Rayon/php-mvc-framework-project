@@ -40,6 +40,10 @@ class Application{
           $primaryKey = $this->userClass::primaryKey();
           $this->user =  $this->userClass::findOne([$primaryKey => $primaryValue]);
          
+        }else{
+            
+            $this->user = null;
+            
         }
        
     }
@@ -64,6 +68,10 @@ class Application{
         return true;
         
 
+    }
+    public static function isGuest()
+    {
+        return !self::$app->user;
     }
     public function logout(){
 
