@@ -44,6 +44,10 @@ use app\core\Application;
 
                 <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
                     <li class="nav-item active">
+                        <a class="nav-link  active" href="/profile">Profile
+                        </a>
+                    </li>
+                    <li class="nav-item active">
                         <a class="nav-link  active" href="/logout">Welcome
                             <?php echo Application::$app->user->getDisplayName() ?>
                             (Logout)
