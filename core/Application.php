@@ -10,8 +10,8 @@ class Application{
 
     public static string $ROOT_DIR;
 
+    public string $layout = 'main';
     public string $userClass;
-
     public Router $router;
     public Request $request;
     public Response $response;
@@ -22,7 +22,7 @@ class Application{
     // ? coz it maybe null
     public ?DbModel $user;
     public static Application $app;
-    public Controller $controller;
+    public ?Controller $controller = null;
     public function __construct($rootPath,array $config){
 
         $this->userClass = $config['userClass'];
