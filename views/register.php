@@ -4,6 +4,7 @@
 /** @var $this \app\core\View */
 
 use app\core\form\Form;
+
 $this->title = 'Register'; 
 
 
