@@ -2,8 +2,26 @@
 
 namespace app\core\middlewares;
 
-abstract class AuthMiddleware extends BaseMiddleware
+use app\core\Application;
+
+class AuthMiddleware extends BaseMiddleware
 {
-    abstract public function execute();
-    
+
+    public array $actions = [];
+ 
+      /**
+       * @param array $actions
+       */
+      public function __construct(array $actions){
+
+        $this->actions = $actions;
+        
+      }
+    public function execute(){
+        
+        if (Application::isGuest()) {
+            
+            
+        }
+    }
 }
