@@ -42,5 +42,6 @@ $app->router->post('/login',[new AuthController() ,'login']);
 $app->router->get('/register',[new AuthController() ,'register']);
 $app->router->post('/register',[new AuthController() ,'register']);
 $app->router->get('/logout',[new AuthController() ,'logout']);
+$app->router->get('/profile',[new AuthController() , 'profile']);
 
 $app->run();

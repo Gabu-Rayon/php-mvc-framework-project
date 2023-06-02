@@ -11,7 +11,11 @@ use app\core\Response;
 
 class AuthController extends Controller{
     
-
+public function __construct(){
+  
+    $this->registerMiddlware(new AuthMiddleware(['profile']));
+    
+}
   public function login(Request $request,Response $response){
 
     $loginForm = new LoginForm();
