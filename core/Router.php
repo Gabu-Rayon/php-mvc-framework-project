@@ -1,6 +1,7 @@
 <?php
 
 namespace app\core;
+use app\core\exception\NotFoundException;
 
 class Router
 {
@@ -37,11 +38,12 @@ class Router
 
         
         if ($callback  === false) {
-            $this->response->setStatusCode(484);
 
-            return $this->renderView("_404"); 
+            
 
-            // return $this->renderContent("Not Found");
+            throw new NotFoundException();
+
+            // return $this->("Not Found Exception");
 
         }
          if (is_string($callback)) {

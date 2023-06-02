@@ -81,7 +81,7 @@ class Application{
     }
     public function run(){
            ///Code Here
-           
+
         // $this->triggerEvent(self::EVENT_BEFORE_REQUEST);
         
         try {
@@ -89,7 +89,9 @@ class Application{
             echo $this->router->resolve();
             
         } catch (\Exception $e) {
-            
+
+            $this->response->setStatusCode($e->getCode());
+
             echo $this->router->renderView('_error', [
                 
                 'exception' => $e,
