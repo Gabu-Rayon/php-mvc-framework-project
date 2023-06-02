@@ -81,6 +81,20 @@ class Application{
     }
     public function run(){
            ///Code Here
-      echo   $this->router->resolve();
+           
+        // $this->triggerEvent(self::EVENT_BEFORE_REQUEST);
+        
+        try {
+            
+            echo $this->router->resolve();
+            
+        } catch (\Exception $e) {
+            
+            echo $this->router->renderView('_error', [
+                
+                'exception' => $e,
+                
+            ]);
+        }
     }
 }
