@@ -9,6 +9,9 @@ class Controller{
 
     public string $layout = 'main';
     
+    public string $action = '';
+    
+    
      /**
       * @var \app\core\middlewares\BaseMiddleware
       */
