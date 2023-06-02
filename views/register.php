@@ -2,6 +2,8 @@
 /** @var $model \app\models\User */
 
 /** @var $this \app\core\View */
+
+use app\core\form\Form;
 $this->title = 'Register'; 
 
 
@@ -9,7 +11,7 @@ $this->title = 'Register';
 ?>
 <h1>Create an Account</h1>
 
-<?php $form = \app\core\form\Form::begin('',"post")?>
+<?php $form = Form::begin('',"post")?>
 <div class="row">
     <div class="col">
         <?php  echo $form->field($model,'firstname')?>
@@ -27,7 +29,7 @@ $this->title = 'Register';
 
 <button type="submit" class="btn btn-primary">Register</button>
 
-<?php echo \app\core\form\Form::end()?>
+<?php echo Form::end()?>
 
 
 <!-- <form action="" method="post">
