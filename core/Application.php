@@ -21,7 +21,6 @@ class Application{
 
     // ? coz it maybe null
     public ?DbModel $user;
-
     public View $view;
     public static Application $app;
     public ?Controller $controller = null;
@@ -84,7 +83,6 @@ class Application{
 
     }
     public function run(){
-           ///Code Here
 
         // $this->triggerEvent(self::EVENT_BEFORE_REQUEST);
         
@@ -96,7 +94,7 @@ class Application{
 
             $this->response->setStatusCode($e->getCode());
 
-            echo $this->router->renderView('_error', [
+            echo $this->view->renderView('_error', [
                 
                 'exception' => $e,
                 

@@ -22,7 +22,7 @@ class Controller
     }
     public function render($view, $params=[])
     {
-        return Application::$app->router->renderView($view, $params);
+        return Application::$app->view->renderView($view, $params);
     }
 
     public function registerMiddleware(BaseMiddleware $middleware)
@@ -33,7 +33,7 @@ class Controller
     /**
      * @return \app\core\middlewares\BaseMiddleware[]
      */
-    public function getMiddlewares() :array
+    public function getMiddlewares(): array
     {
         return $this->middlewares;
     }
