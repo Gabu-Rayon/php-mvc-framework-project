@@ -33,7 +33,7 @@ class Controller
     /**
      * @return \app\core\middlewares\BaseMiddleware[]
      */
-    public function getMiddlewares(): array
+    public function getMiddlewares() :array
     {
         return $this->middlewares;
     }
