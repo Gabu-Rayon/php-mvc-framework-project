@@ -77,10 +77,8 @@ class Router
     }
     public function renderView($view, $params =[] ){
         
-        $layoutContent = $this->layoutContent();
-        $viewContent = $this->renderOnlyView($view,$params);
-        return str_replace('{{content}}',$viewContent,$layoutContent);
-    }
+        return Application::$app->view->renderView($view,$params);
+     }
      public function renderContent($viewContent){
         
         $layoutContent = $this->layoutContent();
