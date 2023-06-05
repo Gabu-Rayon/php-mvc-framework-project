@@ -90,7 +90,7 @@ class Application{
     }
     public function run(){
 
-        // $this->triggerEvent(self::EVENT_BEFORE_REQUEST);
+        $this->triggerEvent(self::EVENT_BEFORE_REQUEST);
         
         try {
             
