@@ -7,3 +7,4 @@ This is my php MVC framework project where
           PHP 
           Routing 
           PHP OOP 
+          PHP 8.*
